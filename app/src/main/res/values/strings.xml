@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KotlinDagger</string>
+    <string name="randomize">Random</string>
 </resources>
