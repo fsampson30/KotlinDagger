@@ -1,10 +1,11 @@
 package com.example.kotlindagger
 
 import dagger.Component
+import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [ApplicationModule::class])
+@Component(modules = [ApplicationModule::class,AndroidSupportInjectionModule::class, MainProviderModule::class])
 interface ApplicationComponent {
-    fun createMainSubcomponent(): MainSubcomponent
+    fun inject(randomApplication: RandomApplication)
 }
